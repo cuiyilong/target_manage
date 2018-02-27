@@ -1,0 +1,50 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.loading {
+  position: absolute;
+  width: 220rpx;
+  height: 360rpx;
+  top:0%;
+  color: #000;
+  text-align: center;
+}
+
+.loading__logo {
+  width: 220rpx;
+  height: 220rpx;
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.loading__name {
+  font-size: 42rpx;
+  font-weight: 200;
+}
+
+.target_status {
+  font-size: 42rpx;
+  font-weight: 200;
+}
+
+.status {
+  position: absolute;
+  width: 220rpx;
+  height: 360rpx;
+  top:40%;
+  color: #000;
+  text-align: center;
+}
+
+.guide {
+  position: absolute;
+  width: 220rpx;
+  height: 360rpx;
+  top:70%;
+  color: #000;
+  text-align: center;
+}
