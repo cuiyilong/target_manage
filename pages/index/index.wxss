@@ -2,7 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   flex-direction: column;
+=======
+>>>>>>> bcf0c167e40150a4df8efe49a02f1ffe735b46e8
   background-color: #fff;
 }
 
@@ -22,7 +25,11 @@
   margin-bottom: 30rpx;
 }
 
+<<<<<<< HEAD
 .lable_name {
+=======
+.loading__name {
+>>>>>>> bcf0c167e40150a4df8efe49a02f1ffe735b46e8
   font-size: 42rpx;
   font-weight: 200;
 }
@@ -41,7 +48,11 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .manage {
+=======
+.guide {
+>>>>>>> bcf0c167e40150a4df8efe49a02f1ffe735b46e8
   position: absolute;
   width: 220rpx;
   height: 360rpx;

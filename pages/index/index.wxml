@@ -1,4 +1,5 @@
 <view class="page">
+<<<<<<< HEAD
   /*logo,load*/
   <view class="loading">
     <image class="lable_name" src="../../assets/img/icon-todo.png"></image>
@@ -11,5 +12,17 @@
   /*manage*/
   <view class="manage">
   <text class="lable_name">目标管理</text>
+=======
+  <view class="loading">
+    <image class="loading__logo" src="../../assets/img/icon-todo.png"></image>
+    <text class="loading__name">Target Tracking</text>
+   
+  </view>
+  <view class="status">
+  <text class="loading__name">今日任务</text>
+  </view>
+  <view class="guide">
+  <text class="loading__name">新的管理</text>
+>>>>>>> bcf0c167e40150a4df8efe49a02f1ffe735b46e8
   </view>
 </view>
