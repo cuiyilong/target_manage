@@ -1,0 +1,15 @@
+<view class="page">
+  /*logo,load*/
+  <view class="loading">
+    <image class="lable_name" src="../../assets/img/icon-todo.png"></image>
+    <text class="loading__name">Target Tracking</text>
+  </view>
+  /*status*/
+  <view class="status">
+  <text class="lable_name">今日状态</text>
+  </view>
+  /*manage*/
+  <view class="manage">
+  <text class="lable_name">目标管理</text>
+  </view>
+</view>
