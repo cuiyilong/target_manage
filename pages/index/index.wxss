@@ -2,14 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #fff;
 }
 
 .loading {
   position: absolute;
   width: 220rpx;
-  height: 360rpx;
+  height: 20%;
   top:0%;
   color: #000;
   text-align: center;
@@ -17,36 +16,73 @@
 
 .loading__logo {
   width: 220rpx;
-  height: 220rpx;
+  height: 150rpx;
   display: block;
   margin-bottom: 30rpx;
 }
+
 .lable_name {
-
   font-size: 42rpx;
   font-weight: 200;
 }
 
-.target_status {
-  font-size: 42rpx;
-  font-weight: 200;
+.status-header {
+  background: #F5F8FF;
+  display: block;
+  font-size: 28rpx;
+  padding: 12rpx 30rpx;
+  color: #9198AB;
 }
 
-.status {
+.user-card__linkItem {
+  flex: 1;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  border-right: 1px dotted #ccc;
+  padding: 5rpx 0;
+}
+
+.score_status {
+  display: flex;
+  align-items: center;
   position: absolute;
-  width: 220rpx;
-  height: 360rpx;
-  top:40%;
+  width: 90%;
+  height: 10%;
+  top:20%;
   color: #000;
   text-align: center;
+  border: solid;
 }
 
+.task_status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 90%;
+  height: 60%;
+  top:30%;
+  color: #000;
+  text-align: center;
+  border: solid;
+  flex-direction: row;
+}
+.task_item {
+  border: solid;
+  height: 100%;
+}
 
 .manage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   position: absolute;
-  width: 220rpx;
-  height: 360rpx;
-  top:70%;
+  width: 90%;
+  height: 10%;
+  top:90%;
   color: #000;
   text-align: center;
+  border: solid;
 }

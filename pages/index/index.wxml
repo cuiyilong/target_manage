@@ -1,15 +1,61 @@
 <view class="page">
-  /*logo,load*/
   <view class="loading">
-    <image class="lable_name" src="../../assets/img/icon-todo.png"></image>
-    <text class="loading__name">Target Tracking</text>
+    <text class="lable_name">Target Tracking</text>
+    <image class="loading__logo" src="../../assets/img/icon-todo.png"></image>
   </view>
-  /*status*/
-  <view class="status">
-  <text class="lable_name">今日状态</text>
+  <view class="score_status">
+    <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">得分</label>
+        <text class="user-card__linkValue">{{ todosScore }}</text>
+    </view>
   </view>
-  /*manage*/
+  <view class="task_status">
+    <view class="task_item"></view>
+        <view
+      wx:for="{{ todos }}"
+      wx:key="{{ index }}"
+      wx:if="{{ !item.completed }}"
+      class="todo-list__item ripple fast fadeInRight"
+      style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item
+        class="todo-item"
+        todo="{{ item }}"
+        data-index="{{ index }}"
+        bindchange="handleTodoItemChange"
+        bindlongtap="handleTodoLongclick">
+      </todo-item>
+    </view>
+    <view class="ripple bounceIn" wx:if="{{!uncompletedCount}}">
+      <tips-info text="太棒了，你的任务已全部完成啦！">
+      </tips-info>
+    </view>
+    <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">今日完成</label>
+        <text class="user-card__linkValue">{{ todosCompletedCount }}</text>
+    </view>
+    <view class="task_item"></view>
+    <view
+      wx:for="{{ todos }}"
+      wx:key="{{ index }}"
+      wx:if="{{ item.completed }}"
+      class="todo-list__item ripple fast fadeInRight"
+      style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item
+        class="todo-item"
+        todo="{{ item }}"
+        data-index="{{ index }}"
+        bindchange="handleTodoItemChange"
+        bindlongtap="handleTodoLongclick">
+      </todo-item>
+    </view>
+    <view class="user-card__linkItem" bindtap="linkToTodos">
+        <label class="user-card__linkLabel">今日待办</label>
+        <text class="user-card__linkValue">{{ todosUncompletedCount }}</text>
+    </view>
+  </view>
   <view class="manage">
-  <text class="lable_name">目标管理</text>
+    <view class="task_item">新建管理</view>
+    <view class="task_item">查看管理</view>
+    <view class="task_item" bindtap="handleAddTodo">+</view>
   </view>
 </view>
