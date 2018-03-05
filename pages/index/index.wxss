@@ -66,7 +66,7 @@
   color: #000;
   text-align: center;
   border: solid;
-  flex-direction: row;
+
 }
 .task_item {
   border: solid;
@@ -85,4 +85,21 @@
   color: #000;
   text-align: center;
   border: solid;
+}
+
+
+.todo-header {
+  background: #F5F8FF;
+  display: block;
+  font-size: 28rpx;
+  padding: 12rpx 30rpx;
+  color: #9198AB;
+}
+
+.todo-list {
+  background: #fff;
+}
+
+.todo-list__item {
+
 }

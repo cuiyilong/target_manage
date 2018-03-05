@@ -8,7 +8,7 @@ const app = getApp()
 Page({
   data: {
     // todos
-    todos: [],
+    //todos: [],
 
     // todo 计数
     uncompletedCount: 0,

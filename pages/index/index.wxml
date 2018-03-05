@@ -10,8 +10,10 @@
     </view>
   </view>
   <view class="task_status">
-    <view class="task_item"></view>
-        <view
+     <view class="todo-header">
+      进行中
+    </view>
+      <view
       wx:for="{{ todos }}"
       wx:key="{{ index }}"
       wx:if="{{ !item.completed }}"
@@ -29,10 +31,7 @@
       <tips-info text="太棒了，你的任务已全部完成啦！">
       </tips-info>
     </view>
-    <view class="user-card__linkItem" bindtap="linkToTodos">
-        <label class="user-card__linkLabel">今日完成</label>
-        <text class="user-card__linkValue">{{ todosCompletedCount }}</text>
-    </view>
+
     <view class="task_item"></view>
     <view
       wx:for="{{ todos }}"
@@ -49,7 +48,7 @@
       </todo-item>
     </view>
     <view class="user-card__linkItem" bindtap="linkToTodos">
-        <label class="user-card__linkLabel">今日待办</label>
+        <label class="user-card__linkLabel">已完成</label>
         <text class="user-card__linkValue">{{ todosUncompletedCount }}</text>
     </view>
   </view>
