@@ -3,9 +3,10 @@
   display: flex;
   background: #FFF;
   border-left: 8rpx solid red;
-  font-size: 32rpx;
+  font-size: 24rpx;
   padding: 22rpx 15rpx; 
   /* border-bottom: 1rpx dashed #f0f3ff;  */
+
 }
 
 .todo-item--level1 {
@@ -37,7 +38,7 @@
   display: inline-block;
   padding: 0 32rpx 0 20rpx;
   padding-bottom: 4px;
-  vertical-align: middle;border:solid;
+  vertical-align: middle;
 }
 
 .todo-item__icon {
@@ -51,7 +52,8 @@
   color: #2C323F;
   display: inline-block;
   vertical-align: middle;
-  width: 98%;
+  width: 50%;
+
 }
 
 .todo-item--completed .todo-item__title {

@@ -57,7 +57,7 @@
 
 .task_status {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   position: absolute;
   width: 90%;
@@ -66,11 +66,27 @@
   color: #000;
   text-align: center;
   border: solid;
-
+  flex-direction: row;
 }
-.task_item {
-  border: solid;
-  height: 100%;
+
+.task_colum_1 {
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  flex-direction: column;
+  align-self:stretch;
+}
+
+.task_colum_2 {
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  flex-direction: column;
+  align-self:stretch;
 }
 
 .manage {

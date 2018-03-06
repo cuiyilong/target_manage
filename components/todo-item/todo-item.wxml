@@ -1,6 +1,7 @@
 <!--components/todo-item/todo-item.wxml-->
 <view
-  class="todo-item todo-item--level{{ todo.level }} {{ todo.completed ? 'todo-item--completed' : '' }}">
+class="todo-item todo-item--level{{ todo.level }} {{ todo.completed ? 'todo-item--completed' : '' }}">
+
   <view class="todo-item__col1">
     <todo-checkbox
       class="todo-item__checkbox"
@@ -16,9 +17,5 @@
       bindinput="handleTitleChange"
       auto-focus="{{ autoFocus }}">
     </input>
-  </view>
-  <view class="todo-item__col3" bindtap="handleDateClick">
-    <!-- <text class="todo-item__date">{{ todo.date }}</text> -->
-    <picker class="todo-item__date" mode="date" bindchange="handleDateChange">{{ todo.date }}</picker>
   </view>
 </view>
