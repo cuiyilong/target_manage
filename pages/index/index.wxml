@@ -64,9 +64,8 @@
     </view>
   </view>
   <view class="task_colum_more_info_view">
-        <view class="task_colum_more_info_1" wx:if="{{completedCount>4}}">更多已完成任务</view>
-        <view class="task_colum_more_info_2" wx:if="{{uncompletedCount>4}}">更多进行中任务</view>
-   
+      <view class="task_colum_more_info_1" wx:if="{{completedCount>4}}">更多已完成任务</view>
+      <view class="task_colum_more_info_2" wx:if="{{uncompletedCount>4}}">更多进行中任务</view>
   </view>
   <view class="manage">
     <view class="task_item">新建管理</view>

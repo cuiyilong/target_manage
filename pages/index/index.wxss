@@ -96,7 +96,6 @@
 
 .task_colum_more_info_view {
   display: flex;
-
   flex-direction: row;
   justify-content: center;
   position: absolute;
@@ -110,7 +109,6 @@
 
 .task_colum_more_info_1 {
   display: flex;
-
   color: #000;
   border:solid;
 
@@ -120,7 +118,6 @@
 
   color: #000;
   border:solid;
-
 }
 
 .manage {
