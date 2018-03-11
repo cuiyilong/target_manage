@@ -16,10 +16,12 @@
       </view>
       <view
         wx:for="{{ todos }}"
-        wx:key="{{ index }}"
+        wx:key="{{ index }}">
+        <view 
         wx:if="{{ item.completed }}"
         class="todo-list__item ripple fast fadeInRight"
         style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+
         <todo-item
           class="todo-item"
           todo="{{ item }}"
@@ -27,12 +29,12 @@
           bindchange="handleTodoItemChange"
           bindlongtap="handleTodoLongclick">
         </todo-item>
+        </view>
       </view>
       
-      <view class="user-card__linkItem" bindtap="linkToTodos">
-        <label class="user-card__linkLabel"></label>
-        <text class="user-card__linkValue">{{ todosUncompletedCount }}</text>
-      </view>
+      
+      
+     
     </view>
     <view class="task_colum_2">
       <view class="todo-header">
@@ -43,7 +45,7 @@
       <view
         wx:for="{{ todos }}"
         wx:key="{{ index }}"
-        wx:if="{{ !item.completed }}"
+        wx:if="{{ !item.completed}}"
         class="todo-list__item ripple fast fadeInRight"
         style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
         <todo-item
@@ -54,13 +56,17 @@
           bindlongtap="handleTodoLongclick">
         </todo-item>
       </view>
+
       <view class="ripple bounceIn" wx:if="{{!uncompletedCount}}">
         <tips-info text="太棒了，你的任务已全部完成啦！">
         </tips-info>
       </view>
     </view>
-
-    
+  </view>
+  <view class="task_colum_more_info_view">
+        <view class="task_colum_more_info_1" wx:if="{{completedCount>6}}">更多已完成任务</view>
+        <view class="task_colum_more_info_2" wx:if="{{uncompletedCount>6}}">更多进行中任务</view>
+   
   </view>
   <view class="manage">
     <view class="task_item">新建管理</view>

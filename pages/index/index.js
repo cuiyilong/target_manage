@@ -15,6 +15,9 @@ Page({
     // todo 计数
     uncompletedCount: 0,
     completedCount: 0,
+    // display control
+    displayuncompletedCount: 0,
+    displaycompletedCount: 0,
 
     // 是否动画延迟
     delay: true
@@ -49,7 +52,7 @@ Page({
     // 更新置顶标题
     let uncompletedCount = todoStore.getUncompletedTodos().length
     let todayCompletedCount = todoStore.getTodayCompletedTodos().length
-    console.log(uncompletedCount)
+    
     let title = ['TodoList（进行中: ', uncompletedCount, ', 今日已完成: ', todayCompletedCount, '）'].join('')
     wx.setTopBarText({ text: title })
     // 动画结束后取消动画队列延迟
@@ -85,6 +88,9 @@ Page({
     data = data || this.data
     data.completedCount = todoStore.getCompletedTodos().length
     data.uncompletedCount = todoStore.getUncompletedTodos().length
+    console.log("update!")
+    console.log(data.uncompletedCount)
+    console.log(data.completedCount)
     this.setData(data)
   },
 
