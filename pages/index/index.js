@@ -98,6 +98,22 @@ Page({
     wx.navigateTo({
       url: '../todo/create'
     })
-  }
+  },
 
+  taptasklist () {
+    let options = { url: '../todo/index' }
+    // 导航
+    wx.switchTab(options)
+  },
+  newTask:function(e){
+    wx.navigateTo({
+      url: '../todo/create'
+    })
+  },
+  manageTask: function (e) {
+    wx.navigateTo({
+      url: '../todo/index'
+    })
+  },
+  
 })

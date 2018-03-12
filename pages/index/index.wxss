@@ -61,7 +61,7 @@
   justify-content: space-between;
   position: absolute;
   width: 90%;
-  height: 55%;
+  height: 50%;
   top:30%;
   color: #000;
   text-align: center;
@@ -98,10 +98,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   position: absolute;
   width: 90%;
   height: 5%;
-  top:85%;
+  top:80%;
   color: #000;
   text-align: center;
   border: solid;
@@ -109,21 +110,24 @@
 
 .task_colum_more_info_1 {
   display: flex;
+  align-self:center;
   color: #000;
   border:solid;
+  font-size:28rpx;
 
 }
 .task_colum_more_info_2 {
   display: flex;
-
+  align-self:center;
   color: #000;
   border:solid;
+  font-size:28rpx;
 }
 
 .manage {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   position: absolute;
   width: 90%;
@@ -132,6 +136,22 @@
   color: #000;
   text-align: center;
   border: solid;
+}
+
+.button_new_task {
+  display: flex;
+  width:40%;
+  font-size:26rpx;
+  vertical-align:middle;
+  display: table-cell;
+
+}
+.button_manage_task {
+  display: flex;
+  width:40%;
+  font-size:26rpx;
+  vertical-align:middle;
+  display: table-cell;
 }
 
 

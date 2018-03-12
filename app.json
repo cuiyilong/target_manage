@@ -19,6 +19,11 @@
     "borderStyle": "black",
     "backgroundColor": "#FFFFFF",
     "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/img/icon-todo.png",
+        "selectedIconPath": "/assets/img/icon-todo-active.png"
+      },{
         "pagePath": "pages/todo/index",
         "text": "任务",
         "iconPath": "/assets/img/icon-todo.png",

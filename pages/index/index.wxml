@@ -11,7 +11,7 @@
   </view>
   <view class="task_status">
     <view class="task_colum_1">
-      <view class="todo-header">
+      <view class="todo-header" bindtap="taptasklist">
         已完成
       </view>
       <view
@@ -37,7 +37,7 @@
      
     </view>
     <view class="task_colum_2">
-      <view class="todo-header">
+      <view class="todo-header" bindtap="taptasklist">
         进行中
       </view>
 
@@ -64,12 +64,11 @@
     </view>
   </view>
   <view class="task_colum_more_info_view">
-      <view class="task_colum_more_info_1" wx:if="{{completedCount>4}}">更多已完成任务</view>
-      <view class="task_colum_more_info_2" wx:if="{{uncompletedCount>4}}">更多进行中任务</view>
+      <view class="task_colum_more_info_1" wx:if="{{completedCount>4}}" bindtap="taptasklist">更多已完成</view>
+      <view class="task_colum_more_info_2" wx:if="{{uncompletedCount>4}}" bindtap="taptasklist">更多进行中</view>
   </view>
   <view class="manage">
-    <view class="task_item">新建管理</view>
-    <view class="task_item">查看管理</view>
-    <view class="task_item" bindtap="handleAddTodo">+</view>
+    <button class="button_new_task" type="primary" bindtap="newTask">新建任务</button>
+    <button class="button_manage_task" type="primary" bindtap="manageTask">管理任务</button>
   </view>
 </view>
