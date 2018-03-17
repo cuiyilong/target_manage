@@ -9,6 +9,42 @@
       </todo-item>
     </view>
     <view class="field-item">
+      <label class="field-label">任务类型</label>
+      <label class="field-control">
+        <picker
+          class="w-full"
+          range="{{ tasktypes }}"
+          value="{{ todo.tasktype - 1 }}"
+          bindchange="handleTypeChange">
+          {{ tasktypes[todo.tasktype - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">权重分值</label>
+      <label class="field-control">
+        <picker
+          class="w-full"
+          range="{{ taskpoints }}"
+          value="{{ todo.taskpoint - 1 }}"
+          bindchange="handlePointChange">
+          {{ taskpoints[todo.taskpoint - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">重复</label>
+      <label class="field-control">
+        <picker
+          class="w-full"
+          range="{{ taskrepeats }}"
+          value="{{ todo.taskrepeat - 1 }}"
+          bindchange="handleRepeatChange">
+          {{ taskrepeats[todo.taskrepeat - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
       <label class="field-label">优先级</label>
       <label class="field-control">
         <picker

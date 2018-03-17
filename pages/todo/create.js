@@ -12,7 +12,13 @@ Page({
     todo: new Todo(),
 
     // 级别
-    levels: ['紧急且重要', '重要不紧急', '紧急不重要', '不紧急不重要']
+    levels: ['紧急且重要', '重要不紧急', '紧急不重要', '不紧急不重要'],
+    // 类型
+    tasktypes: ['学习','健康','金融','教育','工作','兴趣爱好'],
+    // 权重分值
+    taskpoints: ['1','2','3','4'],
+    // 重复
+    taskrepeats: ['每天','仅工作日','自定义']
   },
 
   /**
@@ -36,6 +42,30 @@ Page({
   handleTodoItemChange (e) {
     let todo = e.detail.data.todo
     Object.assign(this.data.todo, todo)
+    this.update()
+  },
+
+  /**
+   * 类型改变事件
+   */
+  handleTypeChange(e) {
+    this.data.todo.tasktype = parseInt(e.detail.value) + 1
+    this.update()
+  },
+
+  /**
+   * 分值改变事件
+   */
+  handlePointChange(e) {
+    this.data.todo.taskpoint = parseInt(e.detail.value) + 1
+    this.update()
+  },
+  
+  /**
+   * 重复改变事件
+   */
+  handleRepeatChange(e) {
+    this.data.todo.taskrepeat = parseInt(e.detail.value) + 1
     this.update()
   },
 
